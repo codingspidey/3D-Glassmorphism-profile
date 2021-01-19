@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #1D4350;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container .card {
+  width: 240px;
+  height: 470px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  backdrop-filter: blur(10);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: 0.6s ease-in-out;
+  transform: scale(0.8);
+}
+.container .card .out-div {
+  position: absolute;
+  z-index: 3;
+  width: 200px;
+  transition: 0.6s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 140px;
+  backdrop-filter: blur(12px);
+  top: 15%;
+  right: -25%;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0.6rem;
+  justify-content: space-evenly;
+}
+.container .card .out-div .profile {
+  display: flex;
+  align-items: center;
+}
+.container .card .out-div .profile .img-box {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+.container .card .out-div .profile .img-box img {
+  width: 100%;
+  height: 100%;
+}
+.container .card .out-div .profile .details {
+  margin-left: 0.4rem;
+}
+.container .card .out-div .profile .details h3 {
+  font-family: "EB Garamond", serif;
+  color: white;
+}
+.container .card .out-div p {
+  font-size: 10px;
+  line-height: 16px;
+  color: #dcdcdc;
+}
+.container .card .top,
+.container .card .bottom {
+  width: 100%;
+}
+.container .card .top {
+  background-color: #d8e7ff;
+ background:  linear-gradient(to right, #cc5333, #23074d);
+  height: 40%;
+  border-radius: 12px 12px 0 0;
+}
+.container .card .top .fa {
+  padding: 12px 12px;
+  color: #474747;
+}
+.container .card .top .img-box {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+.container .card .top .img-box img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: 0.6s ease-in-out;
+}
+.container .card .bottom {
+  height: 60%;
+  justify-content: space-evenly;
+  padding-top: 1.5rem;
+  background-color: #bdd4ef;
+  border-radius: 0 0 12px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .card .bottom h4 {
+  font-family: "EB Garamond", serif;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 0;
+  color: #383838;
+}
+.container .card .bottom p {
+  font-size: 12px;
+  padding: 0 0.3rem;
+  line-height: 22px;
+}
+.container .card .bottom .levels {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.4rem;
+}
+.container .card .bottom .levels .fa {
+  color: #4e62b1;
+  cursor: pointer;
+}
+.container .card .bottom .levels .img-box {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  position: relative;
+  display: flex;
+}
+.container .card .bottom .levels .img-box img {
+  width: 100%;
+  position: absolute;
+}
+.container .card .bottom button {
+  background-color: transparent;
+  border: 2px solid #4e62b1;
+  outline: none;
+  height: 30px;
+  border-radius: 15px;
+  width: 108px;
+  color: #4e62b1;
+  font-weight: bold;
+}
+.container .card .bottom .desc {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.container .card .bottom .desc .text {
+  position: absolute;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+  transform: scale(1);
+}
+
+.card:hover .out-div {
+  top: 10%;
+  backdrop-filter: blur(12px);
+}
+
+.card:hover .top .img-box img {
+  transform: scale(1.2);
+}
